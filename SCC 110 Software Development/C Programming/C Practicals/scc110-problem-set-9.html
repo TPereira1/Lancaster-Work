@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SCC.110 Software Development</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<header id="title-block-header">
+<h1 class="title">SCC.110 Software Development</h1>
+</header>
+<h2 id="problem-set-9-assessed-exercise">Problem Set 9: Assessed
+Exercise</h2>
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+<p><em>Twas the night before Christmas, when all through the house<br />
+Not a creature was stirring, not even a mouse.<br />
+The stockings were hung by the chimney with care,<br />
+In hopes that St Nicholas soon would be there.</em> (Clement Clarke
+Moore)</p>
+</blockquote>
+<p>Christmas is coming and this year Santa is experimenting with the use
+of drones to cope with the increased number of parcels to deliver. The
+elves have constructed a prototype: “Santa’s Latest Electronic Delivery
+system v1” or SLED1 for short. However, while elves are very good at
+making toys their software skills are limited - and this is where you
+come in to help save Christmas.</p>
+<p>In this assessed exercise we would like you to write the control
+software for SLED1. The software needs to read in two files, a mapfile
+called ‘<code>map.txt</code>’ and a command file called
+‘<code>sledcommands.txt</code>’ (make sure you save both files into the
+same directory as your program) and use the instructions in the command
+file to navigate SLED1 around the map.</p>
+<p>To read the files you might want to use a new function,
+<code>fscanf()</code>. This is similar to <code>scanf</code> expect that
+it takes as its first parameter <em>a pointer to a file</em> to read
+from (rather than just reading from the keyboard). <code>fscanf()</code>
+returns the number of matching elements that it read. For example, the
+following code fragment reads in a line from a file pointed to by fp
+consisting of two integers separated by a ‘<code>:</code>’ character.
+The integers are stored in <code>i1</code> and <code>i2</code> and
+result contains the number of items read in.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> fscanf<span class="op">(</span>fp<span class="op">,</span> <span class="st">&quot;%d:%d&quot;</span><span class="op">,</span> <span class="op">&amp;</span>i1<span class="op">,</span> <span class="op">&amp;</span>i2<span class="op">);</span></span></code></pre></div>
+<h2 id="the-map-file">The Map File</h2>
+<p>To help SLED1 navigate it stores a map of the local area in a
+two-dimensional array declared as <code>char map[30][30]</code> and
+initialised so there is the character ‘<code>.</code>’ in each location.
+The coordinates 0,0 are <em>at the bottom left</em> of the map and the
+coordinates 29,29 are <em>at the top right</em>. The x-axis runs
+horizontally and the y-axis vertically.</p>
+<p>The map file file consists of 0 or more lines, each of which has the
+following format.</p>
+<pre><code>x-cordinate,y-cordinate,symbol</code></pre>
+<p>x-cordinate, y-cordinate are represented as integers symbol is a
+character that can be one of:</p>
+<pre><code>&#39;.&#39; (empty),
+&#39;P&#39; (parkland),
+&#39;S&#39; (street), 
+&#39;H&#39; (house), 
+&#39;T&#39; (tower), 
+&#39;F&#39; (factory),
+&#39;U&#39; (university).</code></pre>
+<p>An example line might be as follows:</p>
+<pre><code>9,9,H</code></pre>
+<p>This indicates that at the coordinate 9,9 there is a house.</p>
+<p>The command file consists of 0 or more lines, each of which has the
+following format.</p>
+<p><code>command command_value</code></p>
+<p><code>command</code> is a string that can initially be either
+<code>FORWARD</code> or <code>TURN</code><br />
+<code>command_value</code> is an integer</p>
+<p>An example line might be as follows:</p>
+<pre><code>FORWARD 9
+TURN 90
+FORWARD 9</code></pre>
+<p>This set of commands tells SLED1 to move 9 spaces forward on the map,
+turn 90 degrees clockwise and then move a further 9 spaces. So, for
+example if SLED1 starts at the coordinates 0,0 then at the end of this
+command sequence it will be at location 9,9 at which there is a house.
+SLED1 can only make turns of 0, 90, 180 or 270 degrees.</p>
+<h1 id="the-program">The Program</h1>
+<p>Your task is to write a program that can navigate SLED1 around the
+map specified in the map file according to the instructions supplied in
+the command file. You should store all the information about SLED1 in a
+structure of the following type:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> sled <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span>  x<span class="op">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>         y<span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>         orientation<span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>         totalDistance<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code></pre></div>
+<p>This structure needs to be declared <em>exactly</em> as above and
+should appear in your code immediately after any <code>#includes</code>
+or <code>#defines</code> but <em>before</em> the start of any
+functions.</p>
+<p>Important points:</p>
+<ol type="1">
+<li>The program should be <strong>your own work</strong>—this is <em>not
+a group exercise!</em> - do not share all or part of your solution with
+anyone, and do not post it online (<em>not even to github!</em>). You
+<em>are required</em> to submit your code for plagiarism checking.</li>
+<li>If you need help with your programming please seek help from the
+tutors or the lab demonstrators - <em>not from colleagues or the
+Internet</em>.</li>
+<li>You <em>must attend in-person</em> <strong>your specified</strong>
+practical class in week 10. You will <em>only be able to access the
+questions during your practical class</em> in week 10.</li>
+<li>You will need a working program <strong>by the start of week
+10</strong> <em>so please be sure to join the practical class with a
+working program</em>. You will be required to modify your program in the
+lab in week 10.</li>
+<li>Ensure you read the specification very carefully and that your
+program <em>produces exactly the output specified</em>.</li>
+</ol>
+<h2 id="part-1---the-main-program">Part 1 - The Main Program</h2>
+<ul>
+<li>You should write a program that initialises SLED1 (<em>You should
+initially set SLED1 to start at location 0,0 and facing direction 0
+degrees (i.e. North)</em>), opens the two files and then can call the
+functions you write as your answers in Parts 2 - 3 to test that your
+program is working satisfactorily. Your <code>main</code> function will
+not be marked - it is just to help you develop your program.</li>
+</ul>
+<h2 id="part-2---loading-the-map">Part 2 - Loading the Map</h2>
+<p>You should write the following three functions to help SLED1 load and
+display the map.</p>
+<ul>
+<li>Write a function that initialises SLED1’s internal map with the
+character ‘<code>.</code>’ at every location. <em>10% programming
+marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> initialise_map<span class="op">(</span><span class="dt">char</span> <span class="op">[</span><span class="dv">30</span><span class="op">][</span><span class="dv">30</span><span class="op">])</span></span></code></pre></div>
+<p>-sets the contents of the map array to ‘.’.</p>
+<ul>
+<li>Write a function that populates the map with the entries in the
+file. <em>15% programming marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> populate_map<span class="op">(</span><span class="dt">FILE</span> <span class="op">*,</span><span class="dt">char</span> <span class="op">[</span><span class="dv">30</span><span class="op">][</span><span class="dv">30</span><span class="op">])</span></span></code></pre></div>
+<p>-modifies the map array to contain the entries described in the map
+file.</p>
+<ul>
+<li>Write a function that displays the map, with coordinate 0,0
+displayed in the bottom left. Your map should match exactly the example
+below (for a sample 5x5 map that has been initialised and has a house
+(‘<code>H</code>’) at location 0,0), a university (‘<code>U</code>’) at
+location 0,4 and a factory (‘<code>F</code>’) at location 4,4. <em>15%
+programming marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> print_map<span class="op">(</span><span class="dt">char</span> <span class="op">[</span><span class="dv">30</span><span class="op">][</span><span class="dv">30</span><span class="op">])</span></span></code></pre></div>
+<p>-prints the map array.</p>
+<pre><code>U...F
+.....
+.....
+.....
+H....</code></pre>
+<h2 id="part-3---driving-sled1">Part 3 - Driving SLED1</h2>
+<p>You need to interpret the commands in the command file to move SLED1
+around the map.</p>
+<ul>
+<li>For the next function you need to know how to access the fields of a
+structure when you have a pointer to the structure. This is achieved
+using the ‘<code>-&gt;</code>’ notation. For example, the following code
+snippet shows how to set the direction a sled is travelling given a
+pointer to the sled.</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> sled my_sled<span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> sled <span class="op">*</span>p_sled <span class="op">=</span> <span class="op">&amp;</span>sled<span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>p_sled<span class="op">-&gt;</span>orientation <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span></code></pre></div>
+<ul>
+<li>You should write a function that takes as parameters a pointer to
+the command file, the map you read in and a pointer to the structure
+holding the sled data. The function should process each command in turn
+in the file such that when the function finishes all the commands have
+been processed and the sled structure has been updated appropriately.
+The function should return 0. <em>25% programming marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> process_command<span class="op">(</span><span class="dt">FILE</span><span class="op">*,</span> <span class="dt">char</span> <span class="op">[</span><span class="dv">30</span><span class="op">][</span><span class="dv">30</span><span class="op">],</span> <span class="kw">struct</span> sled<span class="op">*)</span></span></code></pre></div>
+<p>-updates SLED1 to reflect the commands issues.</p>
+<ul>
+<li>Write a function that takes as parameters a pointer to the structure
+holding the sled data and outputs the sled data. Your output should
+match exactly the example below (for a sled that is facing North, is at
+location X=5, Y=6 and has travelled 25 squares). <em>5% programming
+marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> print_sled<span class="op">(</span><span class="kw">struct</span> sled<span class="op">)</span></span></code></pre></div>
+<p>-displays the sled data.</p>
+<pre><code>sled status:
+location 5,6
+orientation 0 degrees
+distance travelled 25 squares
+end sled status.</code></pre>
+<p><em>Note, there is a newline at the end of each line of output above
+- including after</em> ‘<code>status.</code>’.</p>
+<ul>
+<li>Write a function that takes as parameters the map and a pointer to
+the structure holding the sled data and outputs the map symbol found at
+SLED1’s current location. Your output should match exactly the example
+below (for a sled that is currently at a location that contains a
+house). <em>5% programming marks.</em></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> print_symbol<span class="op">(</span><span class="dt">char</span> <span class="op">[</span><span class="dv">30</span><span class="op">][</span><span class="dv">30</span><span class="op">],</span> <span class="kw">struct</span> sled<span class="op">)</span></span></code></pre></div>
+<p>-displays the symbol on the map found at SLED1’s current
+location.</p>
+<p><code>sled is flying over symbol H</code></p>
+<h1 id="week-10s-practical">3 Week 10’s Practical</h1>
+<p>In the week 10 practical you will have to modify your program,
+complete additional tasks worth 25% of the programming marks and then
+submit the complete program <strong>for plagiarism checking</strong> and
+test the program using a series of on-line tests during the practical
+class. In addition you will be asked questions that are designed to
+assess your understanding of the program that you have written and of
+programming in general. The marks will be split 80% programming, 20%
+questions about the program and programming. <em>We recommend generating
+your own test files to ensure your program is well to catch errors in
+advance of your marking session.</em></p>
+<p>During the assessment in week 10 you will NOT be able to compare
+notes with your colleagues.</p>
+</main>
+  <footer>Nigel Davies and Adrian Friday.</footer>
+</body>
+</html>
+</body>
+</html>

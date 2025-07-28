@@ -1,0 +1,8 @@
+lui $s0, 0x1004
+lui $s1,0x100c
+addi $a0, $zero, 0x00ff
+background:
+sw $a0, 0($s0)
+addi $s0, $s0, 4
+bne $s0,$s1, background
+exit:

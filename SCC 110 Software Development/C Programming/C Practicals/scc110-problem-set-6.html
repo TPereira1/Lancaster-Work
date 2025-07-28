@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SCC.110 Software Development</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<header id="title-block-header">
+<h1 class="title">SCC.110 Software Development</h1>
+</header>
+<h1 id="problem-set-6-fruit-machine-with-functions">Problem Set 6: Fruit
+Machine with Functions</h1>
+<h2 id="the-goal">The Goal</h2>
+<p>This week’s lab aims to:</p>
+<ul>
+<li>Extend your familiarity with declaring and using functions</li>
+<li>Think about refactoring code to use functions (the fruit machine
+solution you started last week)</li>
+<li>Practice passing arrays into functions</li>
+</ul>
+<h2 id="scc.110-fruit-machine">SCC.110 Fruit Machine</h2>
+<p>The SCC.110 fruit machine has 3 reels, each containing the following
+symbols:</p>
+<ol type="1">
+<li>a bell</li>
+<li>an orange</li>
+<li>a cherry</li>
+<li>a horseshoe</li>
+</ol>
+<p>Your goal is to successfully model the operation of the fruit
+machine, specifically:</p>
+<ol type="1">
+<li>Spin the reels (i.e. pick which symbol is to be shown on each
+reel)</li>
+<li>Print out the reels (we suggest as text,
+e.g. <code>bell - orange - cherry</code>)</li>
+<li>Detect whether the player has won (the player wins when two or more
+symbols match, jackpot is when all three symbols match)</li>
+</ol>
+<p><em>You should think carefully about how to model your solution as a
+set of functions.</em></p>
+<h2 id="function-decomposition">Function decomposition</h2>
+<p>Refactor your fruit machine implementation to use functions. For
+example, you could use a function to generate a new value when you ‘spin
+a reel’; and a further function to display the state of the reel (what
+symbol is showing), and so forth.</p>
+<ul>
+<li>Your solution must have at least 3 functions including
+<code>main()</code>.</li>
+<li>Make good use of the return value from functions and parameters to
+pass values into and out of your functions as necessary.</li>
+<li>You are not to use <em>global variables</em>.</li>
+</ul>
+<h2
+id="optionaldesirable-variable-number-of-reels-using-arrays">Optional/desirable:
+Variable number of reels using arrays</h2>
+<p>If you have your fruit machine working and you have enough time left
+in this week’s lab, then start this challenge - it’ll really help you
+get to grips with passing arrays into functions.</p>
+<p>Extend your previous solution to use an array to represent your 3
+reels. Refactor your program’s functions so they work with the array
+parameter where necessary. Your game should ideally be extended to allow
+for a variable number of reels (from 1 to 9).</p>
+<ul>
+<li>Your solution should have a function that takes an array of reels as
+a parameter (e.g. randomising the reels, printing out the reels each
+round of the game)</li>
+<li>Your solution should allow for a variable number of reels</li>
+<li>Ideally, your program will allow for the user to enter the number of
+reels, and this should not compromise the ‘jackpot’ and winnings
+calculation function</li>
+</ul>
+<h2 id="hacker-edition">Hacker edition</h2>
+<p>If you’re up to date with all the tasks, and the hacker editions,
+then undertake this advanced task-this’ll also give you knowledge you’ll
+find useful if you choose a C project in Summer Term.</p>
+<p>The advanced task this week extends last week’s task by refactoring
+your functions to use pointers where appropriate to pass parameters into
+functions. This may allow you to create functions that modify the passed
+parameters rather than relying on return values.</p>
+<ol type="1">
+<li><p>Instead of random reels, model the reels as a rotating drum of
+symbols that spin (these can be numbers, letters or ASCII symbols) - you
+may be interested in the ‘ncurses library’, which provides more flexible
+text I/O functions than printf();</p>
+<p>Read the introduction to the <a
+href="http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/intro.html">ncurses
+library (sections 1-1.3)</a>, and see the <a
+href="http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/helloworld.html">hello
+world example</a>. You’ll need to
+<code>#include &lt;ncurses.h&gt;</code> in your C file and compile using
+‘<code>-lncurses</code>’ with <code>gcc</code>.</p></li>
+<li><p>Display the reels as they spin by printing out the intermediate
+stages of the fruit machine;</p></li>
+<li><p>Add additional game logic, e.g. hold and nudge functions
+(i.e. the user can select a reel to nudge by 1 position, or can select
+to hold up to n-1 reels);</p></li>
+<li><p>Keep track of the winnings (score should increase proportionate
+to the number of reels matching) and output a frequency count of the
+number of reels matched in each win when the player quits the
+game.</p></li>
+<li><p>If you’re looking for an additional challenge, can you adjust
+your drums/ program so you that the winning odds level can be adjusted.
+You’ll need to create a small automated test framework so that you can
+measure the outcomes over a number of plays and verify that the odds are
+close to the intended level.</p></li>
+</ol>
+<p>You should be looking to make your code a) great to read, and b)
+solve the problem elegantly. Be sure to ask our opinion on your code in
+the labs.</p>
+</main>
+  <footer>Nigel Davies and Adrian Friday.</footer>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SCC.110</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<header id="title-block-header">
+<h1 class="title">SCC.110</h1>
+</header>
+<h1 id="problem-set-2-getting-started-with-c">Problem Set 2: Getting
+Started with C</h1>
+<h2 id="the-goal">The Goal</h2>
+<p>This week’s lab aims to:</p>
+<ul>
+<li>The goal for today is to get you really familiar with starting
+simple C projects and the edit→compile→execute cycle.</li>
+<li>There are three problems of increasing difficulty. There is also a
+more advanced ‘hacker edition’ if you are a more experienced programmer
+or complete all these exercises in good time.</li>
+<li>As a side effect, you will also be getting more familiar with the
+lab environment, applications, and Shell - do make sure you’ve done the
+UNIX tutorial from last week FIRST</li>
+</ul>
+<p>From home or outside the lab, you should be able to get to the
+virtual lab machines via our ‘virtual machine in our cluster’ <a
+href="http://mylab.lancaster.ac.uk">http://mylab.lancaster.ac.uk</a>
+using most web browsers (pick SCC Ubuntu, click and press a key to
+login). This means you can work on a virtual copy of the lab machines
+from basically anywhere!</p>
+<p>Instructions on how to install the compiler on your own machine are
+linked from the course’s moodle page (see recent announcements).</p>
+<h2 id="todays-tasks">Today’s tasks</h2>
+<h3 id="problem-1-i-love-scc.110">Problem 1: “I love SCC.110”</h3>
+<p>Your task is to create a derivative of the classic ‘hello world’
+program, and get it compiling, fixing any errors on the way.</p>
+<ol type="1">
+<li><p>Start a new program (create a new text file on UNIX, e.g
+<code>code helloworld.c</code>, or by launching <code>code</code> and
+saving as <code>helloworld.c</code>)</p></li>
+<li><p>Type <strong>not</strong> copy &amp; paste the `hello world’
+program code. We recommend you type this as typing helps you remember
+the program structure and learn the correct syntax of the C
+language.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Hello world</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>You will make mistakes this way and it’s slower, <em>but learning to
+fix them is as if not more important</em> than not making them in the
+first place!</p></li>
+<li><p>Save the program</p></li>
+<li><p>Ensure that your program compiles (fix any errors flagged by the
+compiler using the editor, and compile again until no errors are
+generated). See <em>the next section</em> on how to run the
+compiler.</p></li>
+<li><p>Once that works, now adapt the program to print ‘I love SCC110’.
+<em>You’ll need to save and recompile when you’ve changed the
+program</em>.</p></li>
+</ol>
+<h3 id="how-to-compile-your-code">How to Compile your code</h3>
+<p>You will need to include <em>a standard header file</em> for the
+stdio library (this defines what the <code>printf</code> function, among
+others, looks like - and without <code>#include</code>-ing this as we
+did in the lecture, you will get a compiler warning. You should do this
+by placing the following lines at the start of your program.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span></code></pre></div>
+<p>You then compile with something like:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gcc</span> <span class="at">-o</span> outputfile sourcefile.c</span></code></pre></div>
+<p>This compiles a source file called <code>sourcefile.c</code> to an
+executable file named <code>outputfile</code> that you can execute by
+typing <code>./outputfile</code>. The ‘<code>./</code>’ is the
+‘<em>path</em>’ so the shell can find <code>outputfile</code> (it’s
+shorthand for look in the current working directory!).</p>
+<p>If you don’t specify an output file name with ‘<code>-o</code>’ then
+you get ‘<code>a.out</code>’ as the name of your executable by
+default.</p>
+<h2 id="problem-2-odd-numbers">Problem 2: “Odd Numbers”</h2>
+<p>Start a new program (create a new file and choose a meaningful
+filename for your program).</p>
+<p>Remember that the filename of C source code always needs to end in
+‘<code>.c</code>’. The editor will also recognise you’re editing C and
+highlight the syntax of what you type, which is nice! (you may need to
+select ‘C’ rather than ‘plain text’ using the menu bar at the bottom
+right).</p>
+<p>The aim of the program is to print all the odd numbers between 1 and
+100. e.g.:</p>
+<pre><code>1
+3
+5
+7</code></pre>
+<p>etc.</p>
+<p>You will need a ‘main’ function. We recommend you consult the lecture
+slides and slides associated with this lab, or textbook. Naturally,
+there’s plenty more info in the book which is <a
+href="https://onesearch.lancaster-university.uk">a free download from
+the library</a>! You should get used to looking up language features for
+yourself!</p>
+<h2 id="problem-3-squares">Problem 3: “Squares”</h2>
+<p>Our third and final problem for today is to print out a square using
+text characters. You should set a side length in your program and print
+out an appropriately sized square. A side length of 3 would output:</p>
+<pre><code>***
+***
+***</code></pre>
+<p>whereas a side length of 5 would yield:</p>
+<pre><code>*****
+*****
+*****
+*****
+*****</code></pre>
+<p>For additional credit and challenge, create a version of your program
+that prints a ‘hollow’ square, thus:</p>
+<pre><code>***
+* *
+***</code></pre>
+<h2 id="hacker-edition">Hacker edition</h2>
+<p>If you’ve completed the other three tasks and want to push further,
+try this:</p>
+<ul>
+<li><p>Instead of printing a square, create a new program that prints a
+triangle of a height entered by the user.</p>
+<p>Your program should ‘pad’ the output using spaces, i.e. a triangle of
+height 5 should look like:</p>
+<pre><code>    *
+   ***
+  *****
+ *******
+*********</code></pre></li>
+<li><p>Looking for more fun/ challenge? How about an ASCII art circle…
+please make sure you design your algorithm <em>on paper first</em> and
+<em>talk to us</em> about your algorithm!</p></li>
+</ul>
+<h1 id="references">References</h1>
+<p>For a description of the stdio library see either <a
+href="http://en.wikipedia.org/wiki/C_file_input/output">http://en.wikipedia.org/wiki/C_file_input/output</a>
+or the textbook, though note that there is <em>way more detail</em> than
+you need listed on this page!</p>
+</main>
+  <footer>Nigel Davies and Adrian Friday.</footer>
+</body>
+</html>
+</body>
+</html>

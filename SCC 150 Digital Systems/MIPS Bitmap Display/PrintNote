@@ -1,0 +1,77 @@
+.data 
+
+prompt2:.asciiz "Select colour/row/note\n"
+
+.text
+note:
+li $v0, 4
+la $a0, prompt2
+syscall
+li $v0, 12
+syscall
+
+li $s0, 0x10045000
+addi $t4, $zero, 0
+addi $t0, $zero, 6
+addi $a1, $zero, 0x000000
+
+beq $v0, 65, A
+beq $v0, 97, A
+beq $v0, 66, B
+beq $v0, 98, B
+beq $v0, 67, C
+beq $v0, 99, C
+beq $v0, 68, D
+beq $v0, 100, D
+beq $v0, 69, E
+beq $v0, 101, E
+beq $v0, 70, F
+beq $v0, 102, F
+beq $v0, 71, G
+beq $v0, 103, G
+
+
+A:
+addi $s0, $s0, 52028
+la $a0, 69
+j setEndPoint
+B:
+addi $s0, $s0, 40016
+la $a0, 71
+j setEndPoint
+C:
+addi $s0, $s0, 30052
+la $a0, 72
+j setEndPoint
+D:
+addi $s0, $s0, 18040
+la $a0, 74
+j setEndPoint
+E:
+addi $s0, $s0, 8076
+la $a0, 76
+j setEndPoint
+F:
+addi $s0, $s0, 74004
+la $a0, 65
+j setEndPoint
+G:
+addi $s0, $s0, 61992
+la $a0, 67
+
+setEndPoint:
+addi $s1, $s0, 32
+printNote:
+bge $t4, $t0, exit2
+beq $s0, $s1, exit
+sw $a1, 0($s0)
+addi $s0, $s0, 4
+j printNote
+
+exit:
+addi $t4, $t4, 1
+addi $s0, $s0, 2016
+j setEndPoint
+
+exit2:
+j note

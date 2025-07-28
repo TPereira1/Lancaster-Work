@@ -1,0 +1,203 @@
+title,releaseDate,studios,directorFirstName,directorLastName,directorDateOfBirth,actorFirstName,actorLastName,actorDateOfBirth,award,awardedToFirstName,awardedToLastName,awardedToDateOfBBirth
+Extraction,24/04/2020,AGBO,Sam,Hargrave,01/01/1970,Chris,Hemsworth,11/08/1983,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,Thematic Entertainment,Sam,Hargrave,01/01/1970,Rudhraksh,Jaiswal,19/09/2003,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,India Take One Productions,Sam,Hargrave,01/01/1970,Randeep,Hooda,20/08/1976,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,TGIM Films,Sam,Hargrave,01/01/1970,Priyanshu,Painyuli,29/08/1988,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,TGIM Films,Sam,Hargrave,01/01/1970,Golshifteh,Farahani,10/07/1983,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,TGIM Films,Sam,Hargrave,01/01/1970,Pankaj,Tripathi,18/09/1976,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Extraction,24/04/2020,TGIM Films,Sam,Hargrave,01/01/1970,David,Harbour,10/04/1975,People Choice Award for Favorite Action Movie Star,Chris,Hemsworth,11/08/1983
+Triple Frontier,06/03/2019,Atlas Entertainment,Jeffrey,Chandor,24/11/1973,Ben,Affleck,15/08/1972,None,None,None,None
+Triple Frontier,06/03/2019,Atlas Entertainment,Jeffrey,Chandor,24/11/1973,Oscar,Isaac,09/03/1979,None,None,None,None
+Triple Frontier,06/03/2019,Atlas Entertainment,Jeffrey,Chandor,24/11/1973,Charlie,Hunnam,10/04/1980,None,None,None,None
+Triple Frontier,06/03/2019,Atlas Entertainment,Jeffrey,Chandor,24/11/1973,Garrett,Hedlund,03/09/1984,None,None,None,None
+Triple Frontier,06/03/2019,Atlas Entertainment,Jeffrey,Chandor,24/11/1973,Pedro,Pascal,02/04/1975,None,None,None,None
+The Accountant,14/10/2016,Electric City Entertainment,Gavin,OConnor,24/12/1963,Ben,Affleck,15/08/1972,None,None,None,None
+The Accountant,14/10/2016,RatPac-Dune Entertainment,Gavin,OConnor,24/12/1963,Anna,Kendrick,09/08/1985,None,None,None,None
+The Accountant,14/10/2016,Zero Gravity Management,Gavin,OConnor,24/12/1963,Jonathan,Simmons,09/01/1955,None,None,None,None
+The Accountant,14/10/2016,Zero Gravity Management,Gavin,OConnor,24/12/1963,Jon,Bernthal,20/09/1976,None,None,None,None
+The Accountant,14/10/2016,Zero Gravity Management,Gavin,OConnor,24/12/1963,Jeffrey,Tambor,08/07/1944,None,None,None,None
+The Accountant,14/10/2016,Zero Gravity Management,Gavin,OConnor,24/12/1963,John,Lithgow,19/10/1945,None,None,None,None
+The Dark Knight,18/07/2008,Warner Bros. Pictures,Christopher,Nolan,30/07/1970,Christian,Bale,30/01/1974,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+The Dark Knight,18/07/2008,Legendary Pictures,Christopher,Nolan,30/07/1970,Heath,Ledger,04/04/1979,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+The Dark Knight,18/07/2008,Syncopy,Christopher,Nolan,30/07/1970,Aaron,Eckhart,12/03/1968,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+The Dark Knight,18/07/2008,Syncopy,Christopher,Nolan,30/07/1970,Gary,Oldman,21/03/1958,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+The Dark Knight,18/07/2008,Syncopy,Christopher,Nolan,30/07/1970,Maggie,Gyllenhaal,16/11/1977,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+The Dark Knight,18/07/2008,Syncopy,Christopher,Nolan,30/07/1970,Morgan,Freeman,01/06/1937,Academy Award for Best Supporting Actor,Heath,Ledger,04/04/1979
+Inception,16/07/2010,Warner Bros. Pictures,Christopher,Nolan,30/07/1970,Leonardo,Dicaprio,11/11/1974,Academy Award for Best Visual Effects,None,None,None
+Inception,16/07/2010,Legendary Pictures,Christopher,Nolan,30/07/1970,Joseph,Gordon-Levitt,17/02/1981,Academy Award for Best Visual Effects,None,None,None
+Inception,16/07/2010,Syncopy,Christopher,Nolan,30/07/1970,Ellen,Page,21/02/1987,Academy Award for Best Visual Effects,None,None,None
+Inception,16/07/2010,Syncopy,Christopher,Nolan,30/07/1970,Tom,Hardy,15/09/1977,Academy Award for Best Visual Effects,None,None,None
+Inception,16/07/2010,Syncopy,Christopher,Nolan,30/07/1970,Cillian,Murphy,25/05/1976,Academy Award for Best Visual Effects,None,None,None
+The Dark Knight Rises,20/07/2012,Warner Bros. Pictures,Christopher,Nolan,30/07/1970,Christian,Bale,30/01/1974,None,None,None,None
+The Dark Knight Rises,20/07/2012,Legendary Pictures,Christopher,Nolan,30/07/1970,Tom,Hardy,15/09/1977,None,None,None,None
+The Dark Knight Rises,20/07/2012,DC Entertainment,Christopher,Nolan,30/07/1970,Anne,Hathaway,12/11/1982,None,None,None,None
+The Dark Knight Rises,20/07/2012,Syncopy,Christopher,Nolan,30/07/1970,Gary,Oldman,21/03/1958,None,None,None,None
+The Dark Knight Rises,20/07/2012,Syncopy,Christopher,Nolan,30/07/1970,Marion,Cotillard,30/09/1975,None,None,None,None
+The Dark Knight Rises,20/07/2012,Syncopy,Christopher,Nolan,30/07/1970,Joseph,Gordon-Levitt,17/02/1981,None,None,None,None
+Mad Max: Fury Road,15/05/2015,Warner Bros. Pictures,George,Miller,03/17/1945,Tom,Hardy,15/09/1977,Academy Award for Best Costume Design,None,None,None
+Mad Max: Fury Road,15/05/2015,Legendary Pictures,George,Miller,03/17/1945,Charlize,Theron,07/08/1975,Academy Award for Best Costume Design,None,None,None
+Mad Max: Fury Road,15/05/2015,Syncopy,George,Miller,03/17/1945,Nicholas,Hoult,07/12/1989,Academy Award for Best Costume Design,None,None,None
+Mad Max: Fury Road,15/05/2015,Syncopy,George,Miller,03/17/1945,Hugh,Keays-Byrne,18/05/1947,Academy Award for Best Costume Design,None,None,None
+Mad Max: Fury Road,15/05/2015,Syncopy,George,Miller,03/17/1945,Josh,Helman,22/02/1986,Academy Award for Best Costume Design,None,None,None
+Die Hard,15/07/1988,Gordon Company,John,McTiernan,08/01/1951,Bruce,Willis,19/03/1955,None,None,None,None
+Die Hard,15/07/1988,Silver Pictures,John,McTiernan,08/01/1951,Alan,Rickman,21/02/1946,None,None,None,None
+Die Hard,15/07/1988,Silver Pictures,John,McTiernan,08/01/1951,Bonnie,Bedelia,25/03/1948,None,None,None,None
+Die Hard,15/07/1988,Silver Pictures,John,McTiernan,08/01/1951,Reginald,VelJohnson,16/08/1952,None,None,None,None
+Die Hard,15/07/1988,Silver Pictures,John,McTiernan,08/01/1951,Alexander,Godunov,28/11/1949,None,None,None,None
+Die Hard 2,02/07/1990,Gordon Company,Renny,Harlin,15/03/1959,Bruce,Willis,19/03/1955,None,None,None,None
+Die Hard 2,02/07/1990,Silver Pictures,Renny,Harlin,15/03/1959,William,Sadler,13/04/1950,None,None,None,None
+Die Hard 2,02/07/1990,Silver Pictures,Renny,Harlin,15/03/1959,Franco,Nero,23/11/1941,None,None,None,None
+Die Hard 2,02/07/1990,Silver Pictures,Renny,Harlin,15/03/1959,John,Amos,27/12/1939,None,None,None,None
+Die Hard 2,02/07/1990,Silver Pictures,Renny,Harlin,15/03/1959,Reginald,VelJohnson,16/08/1952,None,None,None,None
+Terminator 2: Judgment Day,03/07/1991,Carolco Pictures,James,Cameron,16/08/1954,Arnold,Schwarzenegger,30/07/1947,Academy Award for Best Sound Editing,None,None,None
+Terminator 2: Judgment Day,03/07/1991,Pacific Western Productions,James,Cameron,16/08/1954,Linda,Hamilton,26/09/1956,Academy Award for Best Sound Editing,None,None,None
+Terminator 2: Judgment Day,03/07/1991,Lightstorm Entertainment,James,Cameron,16/08/1954,Edward,Furlong,02/08/1977,Academy Award for Best Sound Editing,None,None,None
+Terminator 2: Judgment Day,03/07/1991,Le Studio Canal+,James,Cameron,16/08/1954,Robert,Patrick,05/11/1958,Academy Award for Best Sound Editing,None,None,None
+Terminator 2: Judgment Day,03/07/1991,Le Studio Canal+,James,Cameron,16/08/1954,Joe,Morton,18/10/1947,Academy Award for Best Sound Editing,None,None,None
+The Terminator,26/10/1984,Hemdale Film Corporation,James,Cameron,16/08/1954,Arnold,Schwarzenegger,30/07/1947,None,None,None,None
+The Terminator,26/10/1984,Hemdale Film Corporation,James,Cameron,16/08/1954,Michael,Biehn,31/07/1956,None,None,None,None
+The Terminator,26/10/1984,Hemdale Film Corporation,James,Cameron,16/08/1954,Linda,Hamilton,26/09/1956,None,None,None,None
+The Terminator,26/10/1984,Hemdale Film Corporation,James,Cameron,16/08/1954,Paul,Winfield,22/05/1941,None,None,None,None
+The Terminator,26/10/1984,Hemdale Film Corporation,James,Cameron,16/08/1954,Lance,Henriksen,05/05/1940,None,None,None,None
+Rambo: First Blood,22/10/1982,The Wallis Interactive,Ted,Kotcheff,07/04/1931,Sylvester,Stallone,06/07/1946,None,None,None,None
+Rambo: First Blood,22/10/1982,Carolco Pictures,Ted,Kotcheff,07/04/1931,Richard,Crenna,30/11/1926,None,None,None,None
+Rambo: First Blood,22/10/1982,Anabasis Investments N.V.,Ted,Kotcheff,07/04/1931,Brian,Dennehy,09/07/1938,None,None,None,None
+Rambo: First Blood,22/10/1982,Anabasis Investments N.V.,Ted,Kotcheff,07/04/1931,David,Caruso,07/01/1956,None,None,None,None
+Rambo: First Blood,22/10/1982,Anabasis Investments N.V.,Ted,Kotcheff,07/04/1931,Jack,Starrett,02/11/1936,None,None,None,None
+Die Hard with a Vengeance,19/05/1995,Cinergi Pictures,John,McTiernan,08/01/1951,Bruce,Willis,19/03/1955,None,None,None,None
+Die Hard with a Vengeance,19/05/1995,Cinergi Pictures,John,McTiernan,08/01/1951,Jeremy,Irons,19/09/1948,None,None,None,None
+Die Hard with a Vengeance,19/05/1995,Cinergi Pictures,John,McTiernan,08/01/1951,Samuel,L.Jackson,21/12/1948,None,None,None,None
+Die Hard with a Vengeance,19/05/1995,Cinergi Pictures,John,McTiernan,08/01/1951,Graham,Greene,22/06/1952,None,None,None,None
+Die Hard with a Vengeance,19/05/1995,Cinergi Pictures,John,McTiernan,08/01/1951,Colleen,Camp,07/06/1953,None,None,None,None
+The Bourne Identity,14/06/2002,The Kennedy/Marshall Company,Doug,Liman,03/07/1965,Matt,Damon,08/10/1970,None,None,None,None
+The Bourne Identity,14/06/2002,Hypnotic Productions,Doug,Liman,03/07/1965,Franka,Potente,22/07/1974,None,None,None,None
+The Bourne Identity,14/06/2002,Hypnotic Productions,Doug,Liman,03/07/1965,Chris,Cooper,09/07/1951,None,None,None,None
+The Bourne Identity,14/06/2002,Hypnotic Productions,Doug,Liman,03/07/1965,Clive,Owen,03/10/1964,None,None,None,None
+The Bourne Identity,14/06/2002,Hypnotic Productions,Doug,Liman,03/07/1965,Brian,Cox,01/06/1946,None,None,None,None
+The Bourne Supremacy,23/07/2004,Universal Pictures,Paul,Greengrass,13/08/1955,Matt,Damon,08/10/1970,None,None,None,None
+The Bourne Supremacy,23/07/2004,Ludlum Entertainment,Paul,Greengrass,13/08/1955,Franka,Potente,22/07/1974,None,None,None,None
+The Bourne Supremacy,23/07/2004,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Brian,Cox,01/06/1946,None,None,None,None
+The Bourne Supremacy,23/07/2004,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Julia,Stiles,28/03/1981,None,None,None,None
+The Bourne Supremacy,23/07/2004,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Karl,Urban,07/06/1972,None,None,None,None
+The Bourne Ultimatum,03/08/2007,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Matt,Damon,08/10/1970,Academy Award for Best Film Editing,None,None,None
+The Bourne Ultimatum,03/08/2007,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Julia,Stiles,28/03/1981,Academy Award for Best Film Editing,None,None,None
+The Bourne Ultimatum,03/08/2007,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,David,Strathairn,26/01/1949,Academy Award for Best Film Editing,None,None,None
+The Bourne Ultimatum,03/08/2007,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Joan,Allen,20/08/1956,Academy Award for Best Film Editing,None,None,None
+The Bourne Ultimatum,03/08/2007,The Kennedy/Marshall Company,Paul,Greengrass,13/08/1955,Albert,Finney,09/05/1936,Academy Award for Best Film Editing,None,None,None
+Lethal Weapon,06/03/1987,Silver Pictures,Richard,Donner,24/04/1930,Mel,Gibson,03/01/1956,None,None,None,None
+Lethal Weapon,06/03/1987,Silver Pictures,Richard,Donner,24/04/1930,Danny,Glover,22/07/1946,None,None,None,None
+Lethal Weapon,06/03/1987,Silver Pictures,Richard,Donner,24/04/1930,Gary,Busey,29/06/1944,None,None,None,None
+Lethal Weapon,06/03/1987,Silver Pictures,Richard,Donner,24/04/1930,Mitchell,Ryan,11/01/1928,None,None,None,None
+Lethal Weapon,06/03/1987,Silver Pictures,Richard,Donner,24/04/1930,Tom,Atkins,13/11/1935,None,None,None,None
+John Wick,24/10/2014,Thunder Road Pictures,Chad,Stahelski,20/09/1968,Keanu,Reeves,02/09/1964,None,None,None,None
+John Wick,24/10/2014,87Eleven Productions,Chad,Stahelski,20/09/1968,Michael,Nyqvist,08/11/1960,None,None,None,None
+John Wick,24/10/2014,MJW Films,Chad,Stahelski,20/09/1968,Alfie,Allen,12/09/1986,None,None,None,None
+John Wick,24/10/2014,DefyNite Films,Chad,Stahelski,20/09/1968,Willem,Dafoe,22/07/1955,None,None,None,None
+John Wick,24/10/2014,DefyNite Films,Chad,Stahelski,20/09/1968,Adrianne,Palicki,06/05/1983,None,None,None,None
+John Wick: Chapter 2,10/02/2017,Thunder Road Pictures,Chad,Stahelski,20/09/1968,Keanu,Reeves,02/09/1964,None,None,None,None
+John Wick: Chapter 2,10/02/2017,TIK Films,Chad,Stahelski,20/09/1968,Riccardo,Scamarcio,13/11/1979,None,None,None,None
+John Wick: Chapter 2,10/02/2017,87Eleven Productions,Chad,Stahelski,20/09/1968,Ian,McShane,29/09/1942,None,None,None,None
+John Wick: Chapter 2,10/02/2017,Summit Entertainment,Chad,Stahelski,20/09/1968,Lonnie,Rashid-Lynn,13/03/1972,None,None,None,None
+John Wick: Chapter 2,10/02/2017,Summit Entertainment,Chad,Stahelski,20/09/1968,Laurence,Fishburne,30/07/1961,None,None,None,None
+Mission: Impossible - Fallout,27/07/2018,Paramount Pictures,Christopher,McQuarrie,12/10/1968,Tom,Cruise,03/07/1962,None,None,None,None
+Mission: Impossible - Fallout,27/07/2018,Skydance Media,Christopher,McQuarrie,12/10/1968,Henry,Cavill,05/05/1983,None,None,None,None
+Mission: Impossible - Fallout,27/07/2018,Skydance Media,Christopher,McQuarrie,12/10/1968,Rebecca,Ferguson,19/10/1983,None,None,None,None
+Mission: Impossible - Fallout,27/07/2018,Bad Robot Productions,Christopher,McQuarrie,12/10/1968,Simon,Pegg,14/02/1970,None,None,None,None
+Mission: Impossible - Fallout,27/07/2018,Bad Robot Productions,Christopher,McQuarrie,12/10/1968,Ving,Rhames,12/05/1959,None,None,None,None
+The Fast and the Furious,22/06/2001,Universal Pictures,Rob,Cohen,12/03/1949,Vin,Diesel,18/07/1967,None,None,None,None
+The Fast and the Furious,22/06/2001,Original Film,Rob,Cohen,12/03/1949,Paul,Walker,12/09/1973,None,None,None,None
+The Fast and the Furious,22/06/2001,Original Film,Rob,Cohen,12/03/1949,Michelle,Rodriguez,12/07/1978,None,None,None,None
+The Fast and the Furious,22/06/2001,Original Film,Rob,Cohen,12/03/1949,Jordana,Brewster,26/04/1980,None,None,None,None
+The Fast and the Furious,22/06/2001,Original Film,Rob,Cohen,12/03/1949,Ja,Rule,29/02/1976,None,None,None,None
+Furious 7,03/04/2015,MRC,James,Wan,26/02/1977,Vin,Diesel,18/07/1967,None,None,None,None
+Furious 7,03/04/2015,Original Film,James,Wan,26/02/1977,Paul,Walker,12/09/1973,None,None,None,None
+Furious 7,03/04/2015,One Race Films,James,Wan,26/02/1977,Dwayne,Johnson,02/05/1972,None,None,None,None
+Furious 7,03/04/2015,China Film Group Corporation,James,Wan,26/02/1977,Michelle,Rodriguez,12/07/1978,None,None,None,None
+Furious 7,03/04/2015,China Film Group Corporation,James,Wan,26/02/1977,Tyrese,Gibson,30/12/1978,None,None,None,None
+Fast & Furious 6,24/05/2013,Relativity Media,Justin,Lin,11/10/1971,Vin,Diesel,18/07/1967,None,None,None,None
+Fast & Furious 6,24/05/2013,One Race Film,Justin,Lin,11/10/1971,Paul,Walker,12/09/1973,None,None,None,None
+Fast & Furious 6,24/05/2013,Dentsu,Justin,Lin,11/10/1971,Dwayne,Johnson,02/05/1972,None,None,None,None
+Fast & Furious 6,24/05/2013,Original Film,Justin,Lin,11/10/1971,Michelle,Rodriguez,12/07/1978,None,None,None,None
+Fast & Furious 6,24/05/2013,Original Film,Justin,Lin,11/10/1971,Tyrese,Gibson,30/12/1978,None,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Chadwick,Boseman,29/11/1976,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Michael,B.Jordan,09/02/1987,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Lupita,Nyong o,01/03/1983,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Danai,Gurira,14/02/1978,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Letita,Wringht,31/10/1993,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Martin,Freeman,08/09/1971,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Daniel,Kaluuya,24/02/1989,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Winston,Duke,15/11/1986,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Sterlin,K.Brown,05/04/1976,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Angela,Bassett,16/08/1958,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Forest,Whitaker,15/07/1961,Academy Award for Best Costume Design,None,None,None
+Black Panther,16/02/2018,Marvel Studios,Ryan,Coogler,23/05/1986,Andy,Serkis,20/04/1964,Academy Award for Best Costume Design,None,None,None
+Avengers: Infinity War,27/04/2018,Marvel Studios,Anthony,Russo,03/02/1970,Robert,Downey Jr.,04/04/1965,Academy Award for Best Visual Effects,None,None,None
+Avengers: Infinity War,27/04/2018,Marvel Studios,Anthony,Russo,03/02/1970,Chris,Hemsworth,11/08/1983,Academy Award for Best Visual Effects,None,None,None
+Avengers: Infinity War,27/04/2018,Marvel Studios,Anthony,Russo,03/02/1970,Chris,Evans,13/06/1981,Academy Award for Best Visual Effects,None,None,None
+Avengers: Infinity War,27/04/2018,Marvel Studios,Anthony,Russo,03/02/1970,Scarlett,Johansson,22/11/1984,Academy Award for Best Visual Effects,None,None,None
+Avengers: Infinity War,27/04/2018,Marvel Studios,Anthony,Russo,03/02/1970,Josh,Brolin,12/02/1968,Academy Award for Best Visual Effects,None,None,None
+The Avengers,04/05/2012,Marvel Studios,Joss,Whedon,23/06/1964,Robert,Downey Jr.,04/04/1965,None,None,None,None
+The Avengers,04/05/2012,Marvel Studios,Joss,Whedon,23/06/1964,Chris,Evans,13/06/1981,None,None,None,None
+The Avengers,04/05/2012,Marvel Studios,Joss,Whedon,23/06/1964,Mark,Ruffalo,22/11/1967,None,None,None,None
+The Avengers,04/05/2012,Marvel Studios,Joss,Whedon,23/06/1964,Chris,Hemsworth,11/08/1983,None,None,None,None
+The Avengers,04/05/2012,Marvel Studios,Joss,Whedon,23/06/1964,Scarlett,Johansson,22/11/1984,None,None,None,None
+Deadpool,12/02/2016,20th Century Fox,Tim,Miller,28/07/1969,Ryan,Reynolds,23/10/1976,None,None,None,None
+Deadpool,12/02/2016,20th Century Fox,Tim,Miller,28/07/1969,Morena,Baccarin,02/06/1979,None,None,None,None
+Deadpool,12/02/2016,20th Century Fox,Tim,Miller,28/07/1969,Ed,Skrein,29/03/1983,None,None,None,None
+Deadpool,12/02/2016,20th Century Fox,Tim,Miller,28/07/1969,T.J.,Miller,04/06/1981,None,None,None,None
+Deadpool,12/02/2016,20th Century Fox,Tim,Miller,28/07/1969,Gina,Carano,16/04/1982,None,None,None,None
+Guardians of the Galaxy,01/08/2014,Marvel Studios,James,Gunn,05/08/1966,Chris,Pratt,21/06/1979,None,None,None,None
+Guardians of the Galaxy,01/08/2014,Marvel Studios,James,Gunn,05/08/1966,Zoe,Saldana,19/06/1978,None,None,None,None
+Guardians of the Galaxy,01/08/2014,Marvel Studios,James,Gunn,05/08/1966,Dave,Bautista,18/01/1969,None,None,None,None
+Guardians of the Galaxy,01/08/2014,Marvel Studios,James,Gunn,05/08/1966,Bradley,Cooper,05/01/1975,None,None,None,None
+Guardians of the Galaxy,01/08/2014,Marvel Studios,James,Gunn,05/08/1966,Vin,Diesel,18/07/1967,None,None,None,None
+Gladiator,05/05/2000,DreamWorks,Ridley,Scott,30/11/1937,Russell,Crowe,07/04/1964,Academy Award for Best Actor,Russell,Crowe,07/04/1964
+Gladiator,05/05/2000,DreamWorks,Ridley,Scott,30/11/1937,Russell,Crowe,07/04/1964,Golden Globe Award for Best Actor – Motion Picture Drama,Russell,Crowe,07/04/1964
+Gladiator,05/05/2000,DreamWorks,Ridley,Scott,30/11/1937,Russell,Crowe,07/04/1964,BAFTA Award for Best Actor in a Leading Role,Russell,Crowe,07/04/1964
+Black Hawk Down,18/01/2002,Revolution Studios,Ridley,Scott,30/11/1937,Josh,Hartnett,21/07/1978,Teen Choice Award for Choice Movie Actor – Drama/Action Adventure,Josh,Hartnett,21/07/1978
+Black Hawk Down,18/01/2002,Revolution Studios,Ridley,Scott,30/11/1937,Eric,Bana,09/08/1968,AFI Award for Best Actor in a Leading Role,Eric,Bana,09/08/1968
+Black Hawk Down,18/01/2002,Revolution Studios,Ridley,Scott,30/11/1937,Eric,Bana,09/08/1968,Broadcast Film Critics Association Award for Best Actor,Eric,Bana,09/08/1968
+Kill Bill: Vol. 1,10/10/2003,A Band Apart,Quentin,Tarantino,27/03/1963,Uma,Thurman,29/04/1970,MTV Movie Award for Best Fight,Uma,Thurman,29/04/1970
+Kill Bill: Vol. 1,10/10/2003,A Band Apart,Quentin,Tarantino,27/03/1963,Uma,Thurman,29/04/1970,Empire Award for Best Actress,Uma,Thurman,29/04/1970
+Kill Bill: Vol. 1,10/10/2003,A Band Apart,Quentin,Tarantino,27/03/1963,Uma,Thurman,29/04/1970,MTV Movie Award for Best Female Performance,Uma,Thurman,29/04/1970
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Jeremy,Renner,07/01/1971,Academy Award for Best Actor,Jeremy,Renner,07/01/1971
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Jeremy,Renner,07/01/1971,BAFTA Award for Best Actor in a Leading Role,Jeremy,Renner,07/01/1971
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Jeremy,Renner,07/01/1971,Satellite Award for Best Actor – Motion Picture Drama,Jeremy,Renner,07/01/1971
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Anthony,Mackie,23/09/1978,Screen Actors Guild Award for Outstanding Performance by a Cast in a Motion Picture,Anthony,Mackie,23/09/1978
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Anthony,Mackie,23/09/1978,Black Reel Award for Best Supporting Actor,Anthony,Mackie,23/09/1978
+The Hurt Locker,26/06/2009,Summit Entertainment,Kathryn,Bigelow,27/11/1951,Brian,Geraghty,13/05/1975,Satellite Award for Best Cast – Motion Picture,Brian,Geraghty,13/05/1975
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Tom,Hardy,15/09/1977,National Board of Review Award for Best Actor,Tom,Hardy,15/09/1977
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Tom,Hardy,15/09/1977,Satellite Award for Best Actor – Motion Picture Drama,Tom,Hardy,15/09/1977
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Nick,Nolte,08/02/1941,National Society of Film Critics Award for Best Supporting Actor,Nick,Nolte,08/02/1941
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Nick,Nolte,08/02/1941,Satellite Award for Best Supporting Actor – Motion Picture,Nick,Nolte,08/02/1941
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Joel,Edgerton,23/06/1974,Australian Film Institute Award for Best Actor in a Leading Role,Joel,Edgerton,23/06/1974
+Warrior,09/09/2011,Lionsgate,Gavin,O'Connor,24/12/1963,Joel,Edgerton,23/06/1974,Satellite Award for Best Actor – Motion Picture Drama,Joel,Edgerton,23/06/1974
+The Revenant,25/12/2015,20th Century Fox,Alejandro,González Iñárritu,15/08/1963,Leonardo,Dicaprio,11/11/1974,Academy Award for Best Actor,Leonardo,Dicaprio,11/11/1974
+The Revenant,25/12/2015,20th Century Fox,Alejandro,González Iñárritu,15/08/1963,Leonardo,Dicaprio,11/11/1974,Golden Globe Award for Best Actor – Motion Picture Drama,Leonardo,Dicaprio,11/11/1974
+The Revenant,25/12/2015,20th Century Fox,Alejandro,González Iñárritu,15/08/1963,Leonardo,Dicaprio,11/11/1974,SAG Award for Outstanding Performance by a Male Actor in a Leading Role,Leonardo,Dicaprio,11/11/1974
+The Revenant,25/12/2015,20th Century Fox,Alejandro,González Iñárritu,15/08/1963,Tom,Hardy,15/09/1977,Academy Award for Best Supporting Actor,Tom,Hardy,15/09/1977
+The Revenant,25/12/2015,20th Century Fox,Alejandro,González Iñárritu,15/08/1963,Tom,Hardy,15/09/1977,BAFTA Award for Best Actor in a Supporting Role,Tom,Hardy,15/09/1977
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Daniel,Craig,02/03/1968,BAFTA Award for Best Actor in a Leading Role,Daniel,Craig,02/03/1968
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Judi,Dench,09/12/1934,BAFTA Award for Best Actress in a Supporting Role,Judi,Dench,09/12/1934
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Naomie,Harris,06/09/1976,British Independent Film Award for Best Supporting Actress,Naomie,Harris,06/09/1976
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Ralph,Fiennes,22/12/1962,Evening Standard British Film Award for Best Actor,Ralph,Fiennes,22/12/1962
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Javier,Bardem,01/03/1969,Goya Award for Best Actor,Javier,Bardem,01/03/1969
+Skyfall,26/10/2012,Eon Productions,Sam,Mendes,01/08/1965,Javier,Bardem,01/03/1969,San Diego Film Critics Society Award for Best Supporting Actor,Javier,Bardem,01/03/1969
+American Sniper,16/01/2015,Village Roadshow Pictures,Clint,Eastwood,31/05/1930,Bradley,Cooper,05/01/1975,Academy Award for Best Sound Editing,None,None,None
+American Sniper,16/01/2015,Village Roadshow Pictures,Clint,Eastwood,31/05/1930,Bradley,Cooper,05/01/1975,Academy Award for Best Sound Mixing,None,None,None
+American Sniper,16/01/2015,Village Roadshow Pictures,Clint,Eastwood,31/05/1930,Bradley,Cooper,05/01/1975,Academy Award for Best Picture,None,None,None
+American Sniper,16/01/2015,Village Roadshow Pictures,Clint,Eastwood,31/05/1930,Sienna,Miller,28/12/1981,Academy Award for Best Picture,None,None,None
+American Sniper,16/01/2015,Village Roadshow Pictures,Clint,Eastwood,31/05/1930,Kyle,Gallner,22/10/1986,Academy Award for Best Picture,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Vin,Diesel,18/07/1967,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Paul,Walker,12/09/1973,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Dwayne,Johnson,02/05/1972,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Jordana,Brewster,26/04/1980,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Tyrese,Gibson,30/12/1978,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Chris,Ludacris-Bridges,11/09/1977,None,None,None,None
+Fast Five,29/04/2011,Universal Pictures,Justin,Lin,11/10/1971,Sung,Kang,08/04/1972,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Aaron,Paul,27/08/1979,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Dominic,Cooper,02/06/1978,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Imogen,Poots,03/06/1989,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Rami,Malek,12/05/1981,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Ramon,Rodriguez,20/12/1979,None,None,None,None
+Need for Speed,14/03/2014,DreamWorks Pictures,Scott,Waugh,23/12/1970,Michael,Keaton,05/09/1951,None,None,None,None

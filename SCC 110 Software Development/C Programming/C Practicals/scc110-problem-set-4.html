@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SCC.110 Software Development</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<header id="title-block-header">
+<h1 class="title">SCC.110 Software Development</h1>
+</header>
+<h1 id="problem-set-4-array-fun">Problem Set 4: Array Fun</h1>
+<h2 id="the-goal">The Goal</h2>
+<p>This week’s lab aims to:</p>
+<ul>
+<li>Practice and consolidate what we’ve learnt so far and get to grips
+with how lists (arrays) work in C.</li>
+<li>You’ll also get to practice iterating through arrays using
+loops</li>
+<li>There is a main problem with a number of sub-tasks of increasing
+difficulty. There is also a more advanced ‘hacker edition’ if you fancy
+more of a challenge!</li>
+</ul>
+<h2 id="problem-1-working-with-arrays-of-integers">Problem 1: Working
+with Arrays of Integers</h2>
+<p>You’ll need to create a program that allows the user to enter 10
+numbers into an integer array.</p>
+<p>Then extend your program to do the following:</p>
+<ol type="1">
+<li>print out all of the numbers in the array</li>
+<li>print the smallest number in the array</li>
+<li>print the largest number in the array</li>
+<li>print the <em>position in the array</em> of the smallest and largest
+numbers</li>
+<li>calculate the arithmetic mean <em>(recall, the arithmetic mean is
+the sum of the numbers divided by ‘n’, the number of numbers</em>)</li>
+</ol>
+<p><strong>General approach</strong>. Think about the overall design of
+each part of the task. Solve each one in turn and ensure your code works
+as desired before moving onto the next part. <em>As ever, we highly
+recommend sketching out each algorithm on paper first.</em></p>
+<h2 id="hacker-edition">Hacker edition</h2>
+<p>‘Bubble sort’ is a well-known sort algorithm that is used to put a
+list of items into ascending order by ‘bubbling’ the smallest item to
+the top (first array position), then the next smallest to the next slot
+(second position) etc. It stops when no swaps are made (all items
+sorted).</p>
+<p>Pseudocode is as follows (<a
+href="https://www.toptal.com/developers/sorting-algorithms/bubble-sort">see
+animation</a>):</p>
+<pre><code>for i = 1:n,
+    swapped = false
+    for j = n:i+1,
+        if a[j] &lt; a[j-1],
+            swap a[j,j-1]
+            swapped = true
+    → invariant: a[1..i] in final position
+    exit if not swapped
+end</code></pre>
+<ol type="1">
+<li>Write a C implementation of bubble sort using arrays. You should
+generate random numbers to populate your array, and output the sorted
+list when done.</li>
+<li>Count the number of times through the loop and the number of swaps
+made, and <em>output this at the end of the program</em>.</li>
+<li><em>Experienced programmers only recommended</em>. Write an ‘ordered
+insert’ that ensures that elements are only inserted in the correct
+position in the array (maintaining ascending order), so the sort is no
+longer necessary.</li>
+<li>(optional) Generate random lists and time the operation of your
+first approach (1) vs. your second from (3) above. Which has better
+performance timed over 10 iterations? The <code>gettimeofday</code>
+function can be used to do millisecond or better time measurements.</li>
+</ol>
+</main>
+  <footer>Nigel Davies and Adrian Friday.</footer>
+</body>
+</html>
+</body>
+</html>

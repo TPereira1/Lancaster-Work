@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SCC.110 Software Development</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<header id="title-block-header">
+<h1 class="title">SCC.110 Software Development</h1>
+</header>
+<h1 id="problem-set-8-strings-and-file-io">Problem Set 8: Strings and
+File I/O</h1>
+<h2 id="the-goal">The Goal</h2>
+<p>The processing of files is critical to most applications computers
+can be put to. Whether searching for patterns while sequencing the
+genome, analysing images from the Hubble space telescope, screening
+mammograms, or more prosaically, storing our emails, Word documents,
+family photos or the databases behind Facebook. It’s all just files and
+file Input/Output.</p>
+<p>Your task today is to take on the role of a computer security and
+forensics expert again (more CSI 110 ;-)) and to write a program that
+can analyse a log of people accessing a web site. We have provided you
+with an ‘access.log’ file from a web server. Your task is to read in
+each line of the file (corresponding to a ‘<em>hit</em>’ on a page of
+the web site) and to gather some statistics by looking for patterns in
+this data.</p>
+<h2 id="log-analysis">Log Analysis</h2>
+<p>Incrementally, develop a solution that:</p>
+<ol type="1">
+<li>Counts how many ‘hits’ are there in total in the
+<code>access.log</code>? (<em>Hint: there is one ‘hit’ per line of the
+file</em>)</li>
+<li>We think our attacker may be using the ‘<em>Mozilla browser</em>’,
+how many lines contain the identifying fingerprint
+‘<code>Mozilla</code>’?</li>
+<li>We’re seeing a lot of ‘possible attacks’ coming from addresses
+starting with (lines starting with) <code>66.249.66</code>. Can you
+print out every page they access? (<em>you only need print the line
+unless you want to go further to test yourself</em>) How many accesses
+do they make in total?</li>
+</ol>
+<p><em>As ever, you should think carefully about your algorithm and
+approach on paper first. Don’t forget good coding practices, including
+choice of meaningful variable names, comments and indentation.</em></p>
+<h2 id="hacker-edition">Hacker edition</h2>
+<ol type="1">
+<li>How many unique addresses do we see? (hint: look at the IP address
+at the start of each line-these look like
+‘<code>148.88.61.11</code>’)</li>
+<li>Can you tabulate how many hits from each address? (<em>hint: you’ll
+need an array for this</em>). <em>Optional: Use a dynamic/resizing array
+or linked list for this.</em> Plus, <em>Optional 2: these should be kept
+or sorted in descending frequency order (most to least
+frequent).</em></li>
+<li>Based on this, should we fear hits from
+<code>66.249.66.*</code>?</li>
+</ol>
+<p>As before, you should be looking to make your code a) great to read,
+and b) solve the problem elegantly. Be sure to ask our opinion on your
+code in the labs.</p>
+<h2 id="resources">Resources</h2>
+<p>As part of today’s problem set you will get more familiar with how to
+do file processing in C. You will need to use the following functions
+from <code>#include &lt;stdio.h&gt;</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>fopen<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>filename<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>mode<span class="op">)</span></span></code></pre></div>
+<ul>
+<li>Open a file with mode ‘<em>mode</em>’. See <code>man fopen</code>,
+the example below or use a web search for more details and
+examples!</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> <span class="op">*</span>fgets<span class="op">(</span><span class="dt">char</span> <span class="op">*</span>str<span class="op">,</span> <span class="dt">int</span> size<span class="op">,</span> <span class="dt">FILE</span> <span class="op">*</span>stream<span class="op">)</span></span></code></pre></div>
+<ul>
+<li>Get a line from the file (stream) and copy it into character array
+‘<code>str</code>’. Take care that the value for ‘<code>size</code>’ is
+large enough to read the whole line of a ‘<em>hit</em>’ in the access
+log. <em>A very common error is not to declare an array big enough (and
+thus allocate enough space) for the resulting data! </em></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> fclose<span class="op">(</span><span class="dt">FILE</span><span class="op">*</span>stream<span class="op">)</span></span></code></pre></div>
+<ul>
+<li>Close file’<em>stream</em>’. This is a variable containing the file
+handle, not the filename!</li>
+</ul>
+<p>You may also find it useful to explore some of the other utility
+functions in <code>#include &lt;string.h&gt;</code> and the suggested
+resources from last week’s lab and lecture in more detail.</p>
+</main>
+  <footer>Nigel Davies and Adrian Friday.</footer>
+</body>
+</html>
+</body>
+</html>

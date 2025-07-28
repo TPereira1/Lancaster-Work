@@ -1,0 +1,5 @@
+This program uses fopen to open a file named "example.txt" in write mode ("w"). If the file is successfully opened, it uses fprintf to write a line of text to the file. Finally, it closes the file using fclose.
+
+Compile and run this program, and it should create a text file named "example.txt" in the same directory as your program. Note that if the file already exists, running the program will overwrite its contents.
+
+Remember to handle errors appropriately in a real-world scenario.

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Unix primer 2022</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="index.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introductory UNIX shell tutorial</title>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <style>
+/* from https://github.com/oxalorg/sakura */
+html {
+  font-size: 75%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+h1 {
+  font-size: 2.35em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+div#wrapperHeader {
+ width:100%;
+ height;200px; /* height of the background image? */
+ /*background:url(../../LULogo.jpg) repeat-x 0 0;*/
+ text-align:right;
+}
+
+div#wrapperHeader div#header {
+ width:1000px;
+ height:5%;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:250px; /* the width of the logo image */
+ height:79px; /* the height of the logo image */
+ margin:0 auto;
+ padding-right:20%;
+}
+  </style>
+</head>
+<body>
+  <header>SCC.110 Software Development</header>
+  <div id="wrapperHeader">
+ <div id="header">
+  <img src="https://www.lancaster.ac.uk/media/wdp/style-assets/images/logos/lu-logo.svg" alt="" />
+ </div>
+</div>
+  <main>
+
+<h1 id="getting-started---learning-the-unix-shell">Getting started -
+learning the UNIX shell</h1>
+<p>UNIX is an operating system first developed in the 1970s, and has
+been under constant development ever since. UNIX is a stable,
+multi-user, multi-tasking system for servers, desktops and laptops.
+Linux is at its heart a UNIX operating system, extended with a graphical
+user interface. Many operating system services and all applications you
+interact with run on top of the UNIX OS.</p>
+<p>Today, we’re going to learn how to use ‘<a
+href="https://swcarpentry.github.io/shell-novice/">the shell</a>’, a
+powerful extensible text based user interface that is the ‘power user’
+interface for interacting with UNIX.</p>
+<p>We are going to use a Linux (ubuntu) which is installed on all the
+lab machines in Science &amp; Technology Building. There are lots of
+options for installing this on your own machine. You can also connect to
+a ‘virtual machine in our cluster’ via <a
+href="http://mylab.lancaster.ac.uk">http://mylab.lancaster.ac.uk</a>
+using most web browsers (pick SCC Ubuntu, click and press a key to
+login). This means you can work on a virtual copy of the lab machines
+from basically anywhere!</p>
+<ul>
+<li><p>For windows users, the ‘command prompt’ is somewhat similar to
+the UNIX shell, but the command set and features are more limited. There
+is a ‘power shell’ for Windows, and this is worth learning if you want
+to be a truly advanced windows user. The GNU Cygwin project provides a
+UNIX like shell and set of tools for running natively on
+Windows.</p></li>
+<li><p>Mac users have a ‘Terminal’ application and UNIX shell bundled
+with Mac OS. You can install the command line developer tools, including
+the C compiler we’ll use in coming weeks using:
+<code>xcode-select --install</code>.</p></li>
+</ul>
+<h2 id="todays-tasks">Today’s tasks</h2>
+<p>This week, we’re going to use an open source ‘Software Carpentry’
+tutorial on github that nicely introduces key features of the UNIX
+shell.</p>
+<ul>
+<li><a
+href="https://swcarpentry.github.io/shell-novice/">https://swcarpentry.github.io/shell-novice/</a></li>
+</ul>
+<p>This is a <em>great</em> introduction to the shell that goes well
+beyond the core set of features you’ll need on this course to get
+started with programming. We’d like you to ensure that you understand
+the following shell features to make the coming weeks easier:</p>
+<ol type="1">
+<li><p>Click on <code>terminal</code> on the toolbar, which should open
+a window with a UNIX bash shell. Work through replicating the commands
+from the <a
+href="https://swcarpentry.github.io/shell-novice/02-filedir/index.html">files
+and directories</a> tutorial, then <a
+href="https://swcarpentry.github.io/shell-novice/03-create/index.html">working
+with files</a>.</p>
+<p>Check:</p>
+<ol type="i">
+<li>you know where your home directory is in the file system;</li>
+<li>that you can make a folder for your files, e.g. called
+<code>scc110</code>;</li>
+<li>that you can find your home directory from the root of the file
+system and navigate from your ‘home’ to the root of the file system
+using the <code>cd</code> command - what is meant by
+<code>cd ..</code>;</li>
+<li>that you can create a text file using either <code>touch</code> or a
+text editor (e.g. <code>nano</code>), rename it, view its contents
+(hint: try <code>more</code> and <code>less</code>), and delete it;</li>
+<li>know where is your ‘h drive’ is mounted in the file system and how
+to open, copy or move files there. You’ll want to do this because ‘h’
+drive files are backed up, and any files you save on the lab machines
+will be lost when the machine is rebuilt and upgraded.</li>
+</ol></li>
+<li><p>Input and output file redirection and the UNIX shell ‘pipe’ that
+takes the output from one program, and ‘provides it’ as input into
+another program as a chain. This is incredibly powerful. We can combine
+programs together to achieve a task really efficiently using relatively
+basic parts!</p>
+<p>Work through the <a
+href="https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html">pipe
+and filter</a> tutorial.</p>
+<p>Check:</p>
+<ol type="i">
+<li>that you know how to capture the output of one program into a file
+and can view the captured file (for example use <code>ls</code> to list
+a folder’s contents and save this as a text file);</li>
+<li>can view this output file using <code>cat</code>, <code>more</code>
+and <code>less</code> (try and compare all 3!);</li>
+<li>can run a command (such as <code>ls</code>) and <em>pipe this</em>
+into <code>less</code> (<code>less --help</code> may be useful).</li>
+</ol></li>
+<li><p>Run <code>man ls</code>. Man is the manual, which includes
+information pages on the commands and applications bundled as part of
+the UNIX OS. Press <code>h</code> for keystroke help in the manual.
+Learn about common <code>ls</code> optional parameters, such as
+<code>-a</code>.</p></li>
+</ol>
+<p>By the end of the lab you should be feeling confident in using the
+UNIX shell and basics of bash. Listing your current folder, changing
+folder to the parent, and back. Plus the basics of copying, renaming,
+and deleting files using the shell.</p>
+<h2 id="hacker-edition">Hacker edition</h2>
+<ol start="4" type="1">
+<li><p><a
+href="https://swcarpentry.github.io/shell-novice/07-find/index.html">Learn
+about <code>grep</code></a>, an application that searches for a pattern
+(possibly using regular expressions) in one or more files, this is
+fantastically useful for searching through files, or parsing the output
+of an application and looking for patterns using <em>a
+pipe</em>.</p></li>
+<li><p>Using <code>find</code>, see if you can locate the binary
+executable for <code>ls</code>. What else is in the folder containing
+<code>ls</code>?</p></li>
+<li><p>Complete the tutorial <a
+href="https://swcarpentry.github.io/shell-novice/05-loop/index.html">on
+loops</a>. What is the importance of <code>history</code>? What is meant
+by <code>!!</code> in the bash shell?</p></li>
+</ol>
+</main>
+  <footer>Nigel Davies and Adrian Friday.<br />
+  Tutorials are &#169; <a href="http://software-carpentry.org/">http://software-carpentry.org/</a>, license <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  </footer>
+</body>
+</html>
+</body>
+</html>

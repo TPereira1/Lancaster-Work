@@ -1,0 +1,56 @@
+.data
+
+prompt2:.asciiz "Select colour/row/note\n"
+
+.text
+lui $s0, 0x1004
+note:
+li $v0, 4
+la $a0, prompt2
+syscall
+li $v0, 12
+syscall
+
+beq $v0, 65, A
+beq $v0, 97, A
+beq $v0, 66, B
+beq $v0, 98, B
+beq $v0, 67, C
+beq $v0, 99, C
+beq $v0, 68, D
+beq $v0, 100, D
+beq $v0, 69, E
+beq $v0, 101, E
+beq $v0, 70, F
+beq $v0, 102, F
+beq $v0, 71, G
+beq $v0, 103, G
+
+A:
+la $a0, 69
+j End
+B:
+la $a0, 71
+j End
+C:
+la $a0, 72
+j End
+D:
+la $a0, 74
+j End
+E:
+la $a0, 76
+j End
+F:
+la $a0, 65
+j End
+G:
+la $a0, 67
+
+End:
+li $v0, 31
+li $a1, 1000
+li $a2, 7
+li $a3, 100
+syscall
+j note
